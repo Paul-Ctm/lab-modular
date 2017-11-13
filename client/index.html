@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta Charest="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Mod-Folio, your personal CV</title>
+
+	<link rel="icon" href="/client/resources/icons/favicon.ico">
+	<link rel="stylesheet" href="/client/lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/client/resources/css/mod-folio.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+    <base href='/'>
+</head>
+
+<body ng-app="myApp">
+
+  <ng-include src="'client/partials/navbar.html'"></ng-include>
+
+  <div class="container">
+
+    <div ng-view></div>
+    <ng-include src="'client/partials/footer.html'"></ng-include>
+  </div>
+
+  <script src="client/lib/bootstrap/js/jquery.min.js"></script>
+  <script src="client/lib/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="client/lib/angular/angular.min.js"></script>
+  <script src="https://code.angularjs.org/1.6.4/angular-route.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-cookies.js"></script>
+  <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/master/dist/clipboard.min.js"></script>
+  <script src="client/lib/clipboard/ngclipboard.min.js"></script>
+
+
+  <script src="client/js/app.js"></script>
+  <script src="client/js/service.js"></script>
+  <script src="client/js/controller.js"></script>
+</body>
+</html>
+

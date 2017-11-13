@@ -1,0 +1,287 @@
+/*
+Classe              | col-xs-*  | col-sm-*  | col-md-*  | col-lg-*
+Valeur de référence | < 768 px  | >= 768 px | >= 992 px | >= 1200 px
+*/
+
+/*Angular exception*/
+@media(min-width:768px) {
+    #dashboard > .ng-scope:first-child {
+      height: 100%;
+    }
+}
+
+textarea{
+    resize:none;
+}
+
+
+.navbar-toggle {
+    border-color: rgb(150,150,150);;
+    color: rgb(150,150,150);
+}
+.navbar-toggle:hover, .navbar-toggle:focus {
+    background-color: #ddd;
+    color: rgb(0, 0, 0);
+}
+
+.sidebar-nav {
+    background: #222;
+}
+
+.sidebar-nav a {
+	text-decoration: none;
+
+}
+
+.sidebar-nav ul {
+	margin:0;
+	padding:0;
+}
+
+.sidebar-header {
+}
+
+.sidebar-header > .sidebar-brand {
+	font-size: 18px;
+    color: #999999;
+}
+
+.sidebar-header > .sidebar-brand:hover {
+    color: #fff;
+    background: none;
+}
+
+
+.sidebar-nav li {
+    text-indent: 5%;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+
+.sidebar-nav li a:hover,
+.sidebar-nav .active a{
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav .fa{
+    margin: 5px;
+}
+
+
+@media(min-width:768px) {
+    .sidebar-nav{
+        border-right: 3px solid rgb(150,0,0);
+    }
+    .sidebar-nav, .content{
+    	height: 100vh;
+    }
+    .sidebar-header {
+		padding: 20px;
+	}
+    #last{
+        position:absolute;
+        bottom: 0px;
+        width: 100%;
+    }
+  #dashboard img {
+    width: 192px;
+  }
+}
+
+@media(max-width:767px) {
+    .sidebar-nav{
+        border-bottom: 3px solid rgb(150,0,0);
+    }
+    .sidebar-brand {
+    	margin: 20px;
+    	line-height: 50px;
+	}
+}
+
+#profil {
+    text-align:center;
+    height: 100%;
+}
+#profil img {
+  margin: 15px auto;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+#profil form {
+    margin: 20px 5px;
+}
+
+@media (max-width: 767px) {
+    #profil img {
+        width: 128px;
+    }
+}
+@media (min-width: 1200px) {
+    #dashboard {
+        height: 100vh;
+
+    }
+}
+
+#biography{
+    height: 100%;
+}
+#biography textarea {
+    width: 100%;
+    height: 200px;
+}
+
+#biography button {
+    float: right;
+}
+
+
+/* Custom */
+.container-custom{
+  background: rgba(0, 0, 0, 0.5);
+}
+.custom-article{
+  padding: 0px;
+}
+
+.btn-danger{
+    background-color: rgb(150,0,0);
+    border-color: transparent;
+}
+.btn-danger:hover{
+    background-color: rgb(120,0,0);
+    border-color: transparent;
+}
+
+.btn-success{
+    background-color: rgb(150,150,150);
+    border-color: transparent;
+}
+
+
+.form-control {
+    border-radius: 0px;
+}
+
+.btn {
+    border-radius: 0px;
+}
+
+.table th{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.title {
+    margin-top : 20px; 
+    padding: 15px;
+}
+#profil{
+
+}
+
+#profil .input-group {
+    display: inline-block;
+    width: 100%
+}
+
+#timeline .input-group-title{
+    display: inline-block;
+    width: 100%;
+}
+#timeline .input-title{
+    border: 0px;
+    box-shadow: inset 0 0px 0px;
+    border-bottom: solid 1px rgb(150,150,150);
+    font-size: 24px;
+}
+#timeline .input-description{
+    height: 200px;
+}
+
+#timeline .input-group {
+    margin-bottom: 6px;
+}
+
+#timeline .input-custom{
+    vertical-align: middle;
+    height: 100%;
+}
+
+.datepicker{
+    vertical-align: middle;
+    height: 100%;
+}
+
+.table-custom {
+    width: 100%;
+}
+.table-custom .tbody-custom {
+    height:200px;
+    overflow-y:auto;
+    width: 100%;
+}
+.table-custom thead, 
+.table-custom tbody,
+.table-custom tr,
+.table-custom td,
+.table-custom th{
+    display: block;
+}
+
+#timeline .table-custom td{
+    width: 100%;
+}
+.table-custom tbody 
+.table-custom td{
+    float: left;
+}
+.table-custom thead 
+.table-custom tr 
+.table-custom th{
+    float: left;
+}
+
+.form-custom legend {
+    font-style: italic;
+    margin-bottom: 10px;
+    border-bottom: 0px;
+
+}
+
+.buttons {
+    float: right;
+}
+
+.alert {
+   height:40%;    
+}
+
+#account {
+    text-align: center;
+}
+#account form *{
+    margin: auto;
+}
+#account input{
+    max-width: 200px;
+    margin: 10px;
+}
+
+@media (max-width: 767px) {
+    #account {
+        margin-top: 60px;
+
+    }
+}

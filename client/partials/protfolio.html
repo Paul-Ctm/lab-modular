@@ -1,0 +1,64 @@
+<!-- presentation.html -->
+<header class="row container-custom" ng-show="header.loaded" ng-controller="headerController as header">
+	<div class="header-container">
+	      <img class="img-circle img-responsive" ng-src="client/resources/images/{{header.profil.img_profil}}" alt="Photo de profil">
+	      <div class="name">{{header.profil.first_name+" "+header.profil.last_name}}</div>
+	      <hr>
+	      <p class="description">{{header.profil.short_desc}}</p>
+	</div>
+</header>
+
+
+<section id="presentation" class="row">
+  <div class="col-sm-4">
+    <article class="row custom-article" ng-show="bio.loaded" ng-controller="bioController as bio">
+      <div class="container-custom">
+        <div class="title">{{bio.data.title}}</div>
+        <hr>
+        <div class="text">
+            <p>
+              {{bio.data.description}}
+            </p>    
+        </div>
+      </div>
+    </article>
+
+    <article class="row custom-article" ng-show="sCtrl.loaded" ng-controller="skillController as sCtrl">
+      <div class="container-custom">
+        <div class="title">COMPETENCES</div>
+        <hr>
+        <div class="progress-bars">
+        	<div ng-repeat="skill in sCtrl.skills">
+        		{{skill.title}}
+	          <div class="progress progress-custom">
+	            <div class="progress-bar progress-bar-custom" role="progressbar" aria-valuenow={{skill.level}} aria-valuemin="0" aria-valuemax="100" style={{"width:"+skill.level+"%"}}>
+	            </div>
+	          </div>  
+          </div>     
+        </div>
+      </div>
+    </article>
+  </div>
+
+	<div class="col-sm-8">
+	    <article class="row custom-article" ng-show="timeCtrl.loaded" ng-controller="timelineController as timeCtrl">
+	      <div class="container-custom">
+	        <div class="title">PARCOURS</div>
+	        <hr>
+	        <div class="timeline">
+	          <dl ng-repeat="years in timeCtrl.years">
+	            <dt><img class ="img-circle img-responsive" src="client/resources/images/biggerdot.png"/>{{years}}</dt>
+	            <dd ng-repeat="event in timeCtrl.timeline | filter:{date_begin: years}">
+	            	<h4>{{event.title}}</h4>
+	            	<div>
+	            		<p>{{event.description}}</p>
+	            		<cite> - {{event.organization}} - de {{event.date_begin | date : 'MMM yyyy'}} à {{event.date_end | date: 'MMM yyyy'}}</cite>
+	            	</div>
+	            </dd>
+	          </dl>         
+	        </div>
+	      </div>
+	  </article>
+	</div>
+</section>
+

@@ -1,0 +1,43 @@
+<article class="row custom-article">
+  <div class="container-custom">
+    <div class="title">Projects</div>
+    <hr>
+    <div class="text">
+            Page en construction...            
+    </div>
+  </div>
+</article>
+<section id="projects" class ="row" ng-controller="projController as projCtrl">
+  <article class="col-xs-6 col-sm-4 col-md-3 col-lg-3 custom-article" ng-repeat="project in projCtrl.projects">
+    <div class="container-custom project">
+    	<h4 class="row title">
+    		{{project.title}}
+    	</h4>
+    	<div class="row details-project">
+    		<a href={{"project/"+project.id}}>
+	    		<img alt="photo de projet" src="client/resources/images/projects/p1.jpg">
+	    		<p>{{project.summary}}</p>
+	    		<cite>{{project.date | date: 'MMM yyyy'}}</cite>
+    		</a>
+    	</div>
+    	<div class="row social">
+    		<div class="col-xs-4">
+    			 <button type="button" class="btn button-custom" ng-click="projCtrl.likeClick(project.id)">
+    			 		{{project.likes}} <i class="fa fa-heart-o fa-lg" aria-hidden="true"></i>
+    			 	</button>
+    		</div>
+    		<div class="col-xs-4">
+    				<a href={{"project/"+project.id+"#comments"}} class="button-custom">
+    			 		<i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i>
+    			 	</a>
+    		</div>
+    		<div class="col-xs-4">
+    			 <button type="button" class="btn button-custom" aria-label="Copié !" ngclipboard data-clipboard-text={{"/projects/"+project.id}} ngclipboard-success="onSuccess(e)">
+    			 		<i class="fa fa-retweet fa-lg" aria-hidden="true"></i>
+    			 	</button>
+    		</div>
+    	</div>
+    </div>
+  </article>
+</section>
+

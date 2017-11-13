@@ -1,0 +1,31 @@
+<!--Barre de navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top" ng-controller="navController as panel">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="">Mod-FolioOo</a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-custom-menu" aria-expanded="false">
+        Menu <i class="fa fa-bars"></i>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-custom-menu">
+      <ul class="nav navbar-nav navbar-right">
+        <li ng-class="{ active:panel.isActive('/') }">
+          <a href="/">
+            <i class="fa fa-user" aria-hidden="true"></i> PRESENTATION
+          </a>
+        </li>
+        <li ng-class="{ active:panel.isActive('/projects')}">
+          <a href="projects">
+            <i class="fa fa-briefcase" aria-hidden="true"></i> PROJETS
+          </a>
+        </li>
+        <li ng-class="{ active:panel.isActive('/contact') }">
+          <a href="contact">
+            <i class="fa fa-envelope" aria-hidden="true"></i> CONTACTS
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

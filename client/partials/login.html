@@ -1,0 +1,17 @@
+<article class="row custom-article" id="account">
+  <div class="container-custom">
+    <div class="title">Connexion au compte administrateur</div>
+    <hr>
+    <div class="text">
+			<div ng-controller="loginController as log">
+			    <h2>Login</h2>
+			    <form ng-submit="log.login()">
+			        <p>Email: <input type="email" class="form-control" name="email" ng-model="log.email" required/></p>
+			        <p>Password: <input type="password" class="form-control" name="password" ng-model="log.password" required/></p>
+			        <input type="submit" value="Submit" class="btn" />
+			        {{ log.state }}
+			    </form>
+			</div>            
+    </div>
+  </div>
+</article>

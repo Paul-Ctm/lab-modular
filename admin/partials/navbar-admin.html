@@ -1,0 +1,40 @@
+<!-- Bar de navigation administrateur -->
+<nav class="col-lg-2 col-md-3 col-sm-3 sidebar-nav navbar-fixed-top" ng-controller="navController as panel">
+  <div class="row sidebar-header">
+      <a class="sidebar-brand" href="#">Mod-Folio Dashboard</a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-custom-menu" aria-expanded="false">
+      Menu <i class="fa fa-bars"></i>
+       <span class="sr-only">Toggle navigation</span>
+      </button>
+  </div>
+  <div class="row">
+    <ul class="collapse navbar-collapse" id="navbar-custom-menu">
+      <li  ng-class="{ active:panel.isActive('/admin/presentation') }">
+        <a href="/admin/presentation">
+          <i class="fa fa-user" aria-hidden="true"></i>  PRESENTATION
+        </a>
+      </li>
+      <li ng-class="{ active:panel.isActive('/admin/projects') }">
+        <a href="/admin/projects">
+          <i class="fa fa-briefcase" aria-hidden="true"></i>  PROJETS
+        </a>
+      </li>
+      <li ng-class="{ active:panel.isActive('/admin/contact') }">
+        <a href="/admin/contact">
+          <i class="fa fa-envelope" aria-hidden="true"></i>  CONTACTS
+        </a>
+      </li>
+      <li ng-class="{ active:panel.isActive('/admin/compte') }">
+        <a href="/admin/account">
+          <i class="fa fa-cog" aria-hidden="true"></i>COMPTE
+        </a>
+      </li>
+      <li id="last">
+        <a href="#" ng-click="panel.logout()">
+          <i class="fa fa-power-off" aria-hidden="true"></i>  DECONEXION
+        </a>
+      </li>
+    </ul>
+
+  </div>
+</nav>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta Charest="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Mod-Folio, your personal CV</title>
+
+	<link rel="icon" href="/admin/resources/icons/favicon.ico">
+    <link rel="stylesheet" href="/admin/lib/datepicker/css/datepicker.css">
+	<link rel="stylesheet" href="/admin/lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/admin/resources/css/mod-folio-admin.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+  <base href='/admin'>
+</head>
+
+<body ng-app="myApp">
+
+  <ng-include src="'admin/partials/navbar-admin.html'"></ng-include>
+
+  <div class="col-lg-offset-2 col-md-offset-3 col-sm-offset-3" id="dashboard">
+    <div ng-view></div>
+  </div>
+
+  <script src="admin/lib/bootstrap/js/jquery.min.js"></script>
+  <script src="admin/lib/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="admin/lib/angular/angular.min.js"></script>
+  <script src="https://code.angularjs.org/1.6.4/angular-route.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-cookies.js"></script>
+  <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/master/dist/clipboard.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+  <script src="admin/lib/datepicker/js/datepicker.js"></script>
+  <script src="admin/lib/clipboard/ngclipboard.min.js"></script>
+
+
+  <script src="admin/js/app.js"></script>
+  <script src="admin/js/service.js"></script>
+  <script src="admin/js/controller.js"></script>
+
+</body>
+</html>
+

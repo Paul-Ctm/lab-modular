@@ -1,0 +1,148 @@
+/*
+Classe              | col-xs-*  | col-sm-*  | col-md-*  | col-lg-*
+Valeur de référence | < 768 px  | >= 768 px | >= 992 px | >= 1200 px
+*/
+
+.navbar-toggle {
+    border-color: rgb(150,150,150);;
+    color: rgb(150,150,150);
+}
+.navbar-toggle:hover, .navbar-toggle:focus {
+    background-color: #ddd;
+    color: rgb(0, 0, 0);
+}
+
+.sidebar-nav {
+    background: #222;
+}
+
+.sidebar-nav a {
+	text-decoration: none;
+
+}
+
+.sidebar-nav ul {
+	margin:0;
+	padding:0;
+}
+
+.sidebar-header {
+}
+
+.sidebar-header > .sidebar-brand {
+	font-size: 18px;
+    color: #999999;
+}
+
+.sidebar-header > .sidebar-brand:hover {
+    color: #fff;
+    background: none;
+}
+
+
+.sidebar-nav li {
+    text-indent: 5%;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav .fa{
+    margin: 5px;
+}
+
+
+@media(min-width:768px) {
+    .sidebar-nav{
+        border-right: 3px solid rgb(150,0,0);
+    }
+    .sidebar-nav, .content{
+    	height: 100vh;
+    }
+    .sidebar-header {
+		padding: 20px;
+	}
+    #last{
+        position:absolute;
+        bottom: 0px;
+        width: 100%;
+    }
+  #dashboard img {
+    width: 192px;
+  }
+}
+
+@media(max-width:767px) {
+    .sidebar-nav{
+        border-bottom: 3px solid rgb(150,0,0);
+    }
+    .sidebar-brand {
+    	margin: 20px;
+    	line-height: 50px;
+	}
+}
+
+#profil {
+    padding: 0px, 40px;
+    text-align:center;
+    height: 100%;
+    color: #f2f2f2;
+}
+#profil  button{
+    color: black;
+}
+
+#profil img {
+  margin: 15px auto;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#profil form {
+    margin: 20px 5px;
+    text-align: center;
+}
+
+#profil .form-group{
+    max-width: 380px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+@media (max-width: 767px) {
+  #dashboard img {
+    width: 128px;
+  }
+}
+@media (min-width: 1200px) {
+#dashboard {
+    height: 100vh;
+
+}
+}
+/* Custom */
+.container-custom{
+  background: rgba(0, 0, 0, 0.5);
+  margin-bottom: 4px;
+}
+.custom-article{
+  padding: 0px;
+}
+
+
+

@@ -1,0 +1,30 @@
+<div id="account" class="container-custom">
+	<div ng-controller="accountController as account">
+	    <h2>Changer de mot de passe</h2>
+	    <form ng-submit="account.changePassword()">
+	    	<fieldset>
+	        <div class="form-group">
+	          <div class="input-group">
+			        <input class="form-control" placeholder="Mot de passe actuel" type="password" name="oldpawd" ng-model="account.data.password" required/>
+	          </div>          
+	        </div>
+       		<div class="form-group">
+          	<div class="input-group">
+			        <input class="form-control" placeholder="Nouveau mot de passe" type="password" name="newpwd" ng-model="account.data.newpass" required/>
+         		</div>          
+        	</div>
+        	<div class="form-group">
+          	<div class="input-group">
+			        <input class="form-control" placeholder="Confirmé mot de passe" type="password" name="confirmpwd" ng-model="account.data.passconfirm" required/>
+          	</div>          
+        	</div>
+			    <div class="form-group">
+          	<div class="input-group">
+			        <input type="submit" class="btn" value="Valider" />
+						</div>          
+        	</div>			        
+			        {{ account.state }}
+        </fialdset>
+	    </form>
+	</div>
+</div>
